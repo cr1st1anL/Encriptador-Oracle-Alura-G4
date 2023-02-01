@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="encriptador.js"></script>
+    <link rel="shortcut icon" href="imagenes/Logo-2.png">
+</head>
+
+<body>
+    <header id="caja-principal">
+        <img src="imagenes/Logo-1.png">
+        <button type="button" class="boton-oscuro" onclick="cambiarModo()">Modo oscuro</button>
+    </header>
+    <main>
+
+        <div class="contenedor-principal">
+            <div class="contenedor-izquierdo">
+                <textarea placeholder="Ingresa el texto aqui" class="texto-para-encriptar" cols="30"
+                    rows="5"></textarea>
+
+
+                <p id="alerta"> 🛈 Escribe tu mensaje en minúsculas</p>
+                <div class="botones">
+                    <button type="button" id="boton-encriptar">Encriptar</button>
+                    <button type="button" id="boton-desencriptar">Desencriptar</button>
+                </div>
+            </div>
+            <div class="contenedor-desencriptar">
+                <img src="imagenes/Muñeco.png" id="img-descifrado">
+                <textarea placeholder="Mensaje no encontrado" id="texto-para-desencriptar" cols="30"
+                    rows="5"></textarea>
+                <button type="button" id="boton-copiar">Copiar</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+<script>
+    let btn = document.getElementById("boton-encriptar");
+    btn.onclick = encriptar;
+
+    let btn2 = document.getElementById("boton-desencriptar");
+    btn2.onclick = desencriptar;
+
+    let botonCopiar = document.getElementById("boton-copiar");
+    botonCopiar.onclick = copiar;
+</script>
+
+</html>

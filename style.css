@@ -1,0 +1,171 @@
+body{
+    background:#F3F5FC;
+    width:940px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#caja-principal{
+    margin-top: 3em;
+    width: 90%;
+    display: flex;
+}
+
+.oscuro{ 
+    background-color: #591305; 
+    color: #f1eded;     
+}
+
+.boton-oscuro{
+    background: rgb(26, 62, 103);
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    position:relative;
+    border-radius: 12px;
+    margin-left: 1100px;
+}
+
+.boton-oscuro::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,red,blue,deeppink,lightgreen,red,blue,
+    deeppink,lightgreen,red,blue,deeppink,lightgreen);
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: animacion 20s linear infinite;
+}
+
+@keyframes animacion{
+    0%{
+        background-position: 0 0;
+    }
+
+    50%{
+        background-position: 400% 0;
+    }
+
+    100%{
+        background-position: 0 0;
+    }
+
+}
+
+.contenedor-principal{
+   margin-left: 33%;
+   width: 100%;
+   height: 100%;
+   display: flex;
+}
+
+
+.texto-para-encriptar{
+    height:400px;
+    width: 600px;
+    left: 240px;
+    top: 255px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    
+    margin: 30px;    
+}
+
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    margin-left: 14%;
+    margin-top: 8px;
+}
+
+#boton-encriptar{
+    height: 67px;
+    width: 228px;
+    left: 0px;
+    top: 0px;
+    border-radius: 24px;
+    padding: 24px; 
+    background: #0A3871;
+    color:#FFFFFF;  
+}
+
+#alerta{
+    margin-left: 34%;
+    text-align: center;
+    display: inline;    
+}
+
+
+
+#boton-desencriptar{
+    height: 67px;
+    width: 228px;
+    left: 0px;
+    top: 0px;
+    border-radius: 24px;
+    padding: 24px; 
+    background: #D8DFE8;
+    color:#6691c5;  
+    margin-left: 50px;
+}
+
+.contenedor-desencriptar{
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 1000px;
+    height: 570px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#texto-para-desencriptar{
+    border: none;
+    text-align: center;
+}
+
+#img-descifrado{
+    display: block;
+    margin: 50px;
+    margin-top: 40px;
+    width: 250px;
+    height: 250px;
+}
+
+#texto-para-desencriptar{
+    padding-top: 30px;
+    width: 400px;
+    
+}
+
+#mensaje{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#boton-copiar{
+    height: 67px;
+    width: 128px;
+    left: 0px;
+    top: 0px;
+    border-radius: 24px;
+    padding: 24px; 
+    background: #D8DFE8;
+    color:#112743;  
+    margin-top: 15px;
+    margin-left: 130px;
+   
+}
+
